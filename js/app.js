@@ -42,8 +42,16 @@ let products=[];
         img1.alt=p.title;
         modal.show();
         }
-
-
+ let cartCount=0;
+ const cartBadge=document.getElementById("cartCount");
+ function updateCart(){
+    cartBadge.innerText=cartCount
+ }
+document.getElementById("modalAdd").onclick=()=>{
+    cartCount++;
+    updateCart();
+    modal.hide();
+}
 // Product Details Modal
    }
    catch(err){
